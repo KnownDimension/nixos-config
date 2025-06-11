@@ -1,0 +1,41 @@
+# some global variables
+layer=top
+anchor=top-right
+max-visible=4
+icons=0
+sort=+time
+
+
+#theme
+background-color=#2e3440ff
+font=TeX Gyre Schola 12
+border-size=2
+border-radius=10
+width=320
+height=150
+margin=5,7,0
+border-color=#5e81acff
+format=<b>%s</b>\n%b
+
+#criteria
+[urgency=low]
+border-color=#5e81acff
+default-timeout=1500
+on-notify=exec mpv /home/unknowndimension/Desktop/notification-sounds/metal-gearsnd.mp3
+
+[urgency=normal]
+border-color=#a3be8cff
+default-timeout=7000
+on-notify=exec mpv /home/unknowndimension/Desktop/notification-sounds/Victory.mp3
+
+[urgency=high]
+border-color=#bf616aff
+default-timeout=0
+on-notify=exec mpv /home/unknowndimension/Desktop/notification-sounds/Stage-Win.mp3
+
+[app-name=org.gnome.Evolution]
+border-color=#ebcb8b
+on-notify=exec mpv /home/unknowndimension/Desktop/notification-sounds/you-got-mail.mp3
+
+[app-name="blueman"]
+invisible=1
