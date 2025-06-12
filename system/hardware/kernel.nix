@@ -54,6 +54,7 @@
             "nvidia-drm"
             "nvidia-uvm"
             "nvidia-modeset"
+            "xpad"
         ];
 
 
