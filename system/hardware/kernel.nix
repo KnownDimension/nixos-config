@@ -1,11 +1,3 @@
-# kernel, mainly optimised for audio even though im not an audio professional, mainly just experimenting
-# instead of using the RT kernel and the extra configs as mentioned in https://nixos.wiki/wiki/JACK i used liquorix, this is to
-# allow for low latency audio while not going full RT as full RT can potentially negatively affect gaming performance
-# and introduce potential problems i dont want to deal with
-#
-#
-
-
 { config, lib, pkgs, modulesPath, ... }:
 
 {
@@ -17,23 +9,6 @@
     "CONFIG_LOCK_DEBUGGING=y"
     "CONFIG_DEBUG_KERNEL=y" "threadirq" "CONFIG_NTSYNC=y"];
         kernelPackages = pkgs.linuxPackages_cachyos;
-        
-        #kernelPackages = pkgs.linuxPackages_6_11;
-     #   kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_11.override {
-    #      argsOverride = rec {
-    #        src = pkgs.fetchurl {
-
-                #owner = "torvalds";
-               # repo = "linux";
-               # rev = "9c26a1d0a01c941706fd0be55915b4db87bbe7c3";
-#                url = "mirror://kernel/linux/kernel/v6.x/linux-${"6.11.11"}.tar.xz";
-#                sha256 = "sha256-YhSOfhf1TEpateda1IgmgsVL7oGJSL5hpZYyNPwISfw=";
-#            };
-#            dontStrip = true;
-#            version = "6.11";
-#            modDirVersion = "6.11.11";
-#            };    
-#        });
 
 #        kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override {
 #            argsOverride = rec {
@@ -61,7 +36,6 @@
 
 
 
-#       pkgs.linuxPackages_cachyos;
         postBootCommands = ''
             echo 2048 > /sys/class/rtc/rtc0/max_user_freq
             echo 2048 > /proc/sys/dev/hpet/max-user-freq
@@ -71,10 +45,7 @@
         # The SOUND_CARD_PCI_ID can be obtained like so:
         # $ lspci ¦ grep -i audio
     };
-   # services.scx = {
-   #     enable = true; 
-   #     scheduler = "scx_lavd";
-  #  };
+
     security.pam.loginLimits = [
         { domain = "@audio"; item = "memlock"; type = "-"; value = "unlimited"; }
         { domain = "@audio"; item = "rtprio"; type = "-"; value = "99"; }
