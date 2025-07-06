@@ -47,12 +47,12 @@
     #home.sessionVariables.PATH = "${pkgs.vscode}/bin:${config.home.sessionVariables.PATH}";
     #home.sessionVariables.PATH = lib.mkForce "${pkgs.vscode}/bin:${config.home.sessionVariables.PATH}";
     #home.sessionVariables.PATH = "${pkgs.vscode}/bin:${lib.getAttrFromPath [ "sessionVariables" "PATH" ] config}";
+    # export PATH="${pkgs.unityhub}/bin:$PATH"
 
     home.file = {
         ".bashrc" = {
             text = ''
-              export PATH="${pkgs.vscodium}/bin:$PATH"
-              export PATH="${pkgs.unityhub}/bin:$PATH"
+              export PATH="${pkgs.vscodium}/bin:$PATH"          
             '';
         };
     };
