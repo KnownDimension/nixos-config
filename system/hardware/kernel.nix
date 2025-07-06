@@ -22,6 +22,20 @@
 #        });
         
        # });
+
+
+        extraModprobeConfig = ''
+            options iwlwifi power_save=0 uapsd_disable=1 disable_11ax=1
+
+
+
+        '';
+
+
+
+
+
+
         blacklistedKernelModules = [
             "zram"
             "nvidia"

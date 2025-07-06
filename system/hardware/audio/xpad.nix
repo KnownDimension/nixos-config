@@ -3,7 +3,7 @@
 {
 
   hardware.xpadneo.enable = true;
-  hardware.enableAllFirmware = true;
+#  hardware.enableAllFirmware = true;
   
 
 
