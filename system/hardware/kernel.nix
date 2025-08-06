@@ -32,10 +32,6 @@
         '';
 
 
-
-
-
-
         blacklistedKernelModules = [
             "zram"
             "nvidia"
