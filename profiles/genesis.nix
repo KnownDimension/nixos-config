@@ -48,17 +48,9 @@
   boot.initrd.luks.devices."luks-d6c1d1d7-e9d4-4b20-bd75-7fab163e0b11".device = "/dev/disk/by-uuid/d6c1d1d7-e9d4-4b20-bd75-7fab163e0b11";
   boot.initrd.luks.devices."luks-d6c1d1d7-e9d4-4b20-bd75-7fab163e0b11".keyFile = "/crypto_keyfile.bin";
 
-  networking.hostName = "udimension-genesis-nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  
   # nixos
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  # Enable networking
-  networking.networkmanager.enable = true;
+ 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
 

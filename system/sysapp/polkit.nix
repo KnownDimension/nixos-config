@@ -24,8 +24,8 @@
 
 
   environment.systemPackages = with pkgs; [
-    (import ./polkitstart.nix { inherit pkgs; })
-    libsForQt5.polkit-kde-agent
+#    (import ./polkitstart.nix { inherit pkgs; })
+#    libsForQt5.polkit-kde-agent
     lxqt.lxqt-policykit
   ];
 

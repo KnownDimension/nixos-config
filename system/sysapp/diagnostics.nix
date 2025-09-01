@@ -20,6 +20,8 @@
         busybox
         zstd
         sops
+        iw
+        lshw
     ];
     programs.light.enable = true;
 }

@@ -10,7 +10,7 @@ home.packages = [
     pkgs.aseprite
     pkgs.obs-studio
     pkgs.lollypop
-    pkgs.libsForQt5.falkon
+    pkgs.kdePackages.falkon
     pkgs.conda
     pkgs.boxbuddy
     pkgs.brave

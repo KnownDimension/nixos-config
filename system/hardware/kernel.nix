@@ -26,7 +26,7 @@
             
         # disable_11ax=1 11n_disable=1
         extraModprobeConfig = ''
-            options iwlwifi power_save=0 uapsd_disable=1 disable_11ax=1
+            options iwlwifi power_save=0 uapsd_disable=1
 
 
         '';

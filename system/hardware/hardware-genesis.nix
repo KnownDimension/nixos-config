@@ -34,14 +34,32 @@
     [ { device = "/dev/disk/by-uuid/befe99b6-d514-4d1a-9642-b8a60bd94806"; }
     ];
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp7s0.useDHCP = lib.mkDefault true;
 
+
+  
+   # Enable networking
+  networking.networkmanager.enable = true;
+  networking.hostName = "udimension-genesis-nixos"; # Define your hostname.
+  
+  # Disable NetworkManager's internal DNS resolution
+#  networking.networkmanager.dns = "none";
+
+  # These options are unnecessary when managing DNS ourselves
+#  networking.useDHCP = false;
+#  networking.dhcpcd.enable = false;
+
+  # Configure DNS servers manually (this example uses Cloudflare and Google DNS)
+  # IPv6 DNS servers can be used here as well.
+#  networking.nameservers = [
+#    "1.1.1.1"
+#    "1.0.0.1"
+#    "8.8.8.8"
+#    "8.8.4.4"
+#  ];
+
+
+  networking.useDHCP = lib.mkDefault true;
+  
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
