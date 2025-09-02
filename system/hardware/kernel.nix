@@ -8,7 +8,7 @@
         kernelParams = [ "pcie_aspm=off" "CONFIG_SCHED_DEBUG=y"
     "CONFIG_LOCK_DEBUGGING=y"
     "CONFIG_DEBUG_KERNEL=y" "threadirq" "CONFIG_NTSYNC=y"];
-        kernelPackages = pkgs.linuxPackages_cachyos;
+        kernelPackages = pkgs.linuxPackages_latest;
 
 #        kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override {
 #            argsOverride = rec {
