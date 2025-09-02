@@ -7,8 +7,8 @@
         kernel.sysctl = { "vm.swappiness" = 10; "fs.inotify.max_user_watches" = 524288; };
         kernelParams = [ "pcie_aspm=off" "CONFIG_SCHED_DEBUG=y"
     "CONFIG_LOCK_DEBUGGING=y"
-    "CONFIG_DEBUG_KERNEL=y" "threadirq" "CONFIG_NTSYNC=y"];
-        kernelPackages = pkgs.linuxPackages_latest;
+    "CONFIG_DEBUG_KERNEL=y" "threadirq" "CONFIG_NTSYNC=y"]; # "CONFIG_NTSYNC=y"
+        kernelPackages = pkgs.linuxPackages_cachyos;
 
 #        kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override {
 #            argsOverride = rec {
