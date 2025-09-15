@@ -7,6 +7,8 @@
 
   sops.secrets."userpassword" = {};
 
+  security.sudo.enable = true;
+  security.sudo.wheelNeedsPassword = true;
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.unknowndimension = {

@@ -3,11 +3,12 @@
 { pkgs, ... }:
 {
 
+
+# nixpkgs.overlays = [(import ./spdlog-patched.nix)];
+
 programs.waybar = {
     enable = true;
-    package = pkgs.waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-    });
+    package = pkgs.waybar;
     systemd = {
       enable = false; # disable it,autostart it in hyprland conf
       target = "graphical-session.target";

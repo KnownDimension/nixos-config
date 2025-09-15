@@ -7,7 +7,7 @@
 
 home.packages = [
     pkgs.pixelorama
-    pkgs.aseprite
+#    pkgs.aseprite
     pkgs.obs-studio
     pkgs.lollypop
     pkgs.kdePackages.falkon

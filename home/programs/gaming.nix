@@ -9,7 +9,7 @@
 home.packages = with pkgs; [
     pkgs.protonup-qt
     pkgs.wineWowPackages.stagingFull
-    pkgs.osu-lazer-bin
+#    pkgs.osu-lazer-bin
     pkgs.rpcs3
    # pkgs.mame
    # (retroarch.override {

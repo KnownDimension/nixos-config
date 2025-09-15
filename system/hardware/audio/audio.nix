@@ -57,7 +57,7 @@
     pamixer
     portaudio
     python312Packages.pyaudio
-    python311Packages.pyaudio
+#    python311Packages.pyaudio
     qpwgraph
     qjackctl
 

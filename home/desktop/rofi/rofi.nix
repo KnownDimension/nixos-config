@@ -4,7 +4,7 @@
 {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi;
   };
   home.file = {
     ".config/rofi/launcher.sh".source = ./launcher.sh;
