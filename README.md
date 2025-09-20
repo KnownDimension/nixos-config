@@ -1,1 +1,3 @@
-my nixos config, it isnt perfect, it isnt genius, but its mine
+# my nixos config
+
+it isnt perfect, it isnt genius, but its mine
