@@ -21,10 +21,11 @@ home.packages = [
     pkgs.kitty
     pkgs.jdk17
     pkgs.syncthingtray
-    pkgs.vial
+#    pkgs.vial
     pkgs.audacity
     pkgs.localsend
     pkgs.anytype
+    pkgs.protonvpn-gui
 #    pkgs.firefox-devedition
    ];
 
