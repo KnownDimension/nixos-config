@@ -14,7 +14,7 @@
                     extensions = with pkgs.vscode-extensions; [
                         arcticicestudio.nord-visual-studio-code
                         yzhang.markdown-all-in-one
-    #                    ms-python.python
+                        ms-python.python
                         firefox-devtools.vscode-firefox-debug
                         esbenp.prettier-vscode
                         pkief.material-icon-theme

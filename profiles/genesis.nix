@@ -15,6 +15,7 @@
       ../system/hardware/opengl-genesis.nix
 #      ../system/hardware/openrazer.nix  #broken for now
       ../system/hardware/printing.nix
+      ../system/hardware/qmk.nix
       ../system/hardware/audio/audio.nix
       ../system/hardware/audio/bluetooth.nix
       ../system/sysapp/cachix.nix

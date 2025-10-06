@@ -21,6 +21,12 @@ home.packages = [
  #   pkgs.local-ai
    # pkgs.ollama-rocm
     pkgs.gifsicle
+    pkgs.nicotine-plus
+    pkgs.cosmic-files
+    pkgs.audacity
+    pkgs.localsend
+    pkgs.anytype
+#    pkgs.olive-editor // currently has build error
    ];
 
 

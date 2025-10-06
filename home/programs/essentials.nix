@@ -10,8 +10,7 @@ home.packages = [
     pkgs.imagemagick
     pkgs.nix-prefetch-git
     pkgs.python3
-    pkgs.cosmic-files
-#    pkgs.olive-editor // currently has build error
+
     pkgs.gnupg
     pkgs.gradience
     pkgs.rclone
@@ -22,9 +21,6 @@ home.packages = [
     pkgs.jdk17
     pkgs.syncthingtray
 #    pkgs.vial
-    pkgs.audacity
-    pkgs.localsend
-    pkgs.anytype
     pkgs.protonvpn-gui
 #    pkgs.firefox-devedition
    ];
