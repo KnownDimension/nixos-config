@@ -22,6 +22,7 @@
         sops
         iw
         lshw
+        libisoburn
     ];
     programs.light.enable = true;
 }

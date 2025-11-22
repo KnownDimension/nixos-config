@@ -46,6 +46,7 @@
     ./programs/terminal-goofs.nix
     ./programs/vscode.nix
     ./programs/work.nix
+    ./programs/strawberry.nix
   #  ./programs/unity.nix not in use rn
   #  ./programs/ollama.nix
     ./programs/git.nix

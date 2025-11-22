@@ -10,7 +10,6 @@ home.packages = [
     pkgs.imagemagick
     pkgs.nix-prefetch-git
     pkgs.python3
-
     pkgs.gnupg
     pkgs.gradience
     pkgs.rclone

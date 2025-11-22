@@ -38,8 +38,24 @@
 
   
    # Enable networking
-  networking.networkmanager.enable = true;
-  networking.hostName = "udimension-genesis-nixos"; # Define your hostname.
+#  networking.networkmanager.enable = true;
+#  networking.hostName = "udimension-genesis-nixos"; # Define your hostname.
+
+  networking = {
+    networkmanager.enable = true;
+    hostName = "udimension-genesis-nixos"; # Define your hostname.
+    interfaces.wlp7s0 = {
+      ipv4.addresses = [{
+        address = "192.168.1.5";
+        prefixLength = 24;
+      }];
+
+
+
+    };
+
+  };
+
   
   # Disable NetworkManager's internal DNS resolution
 #  networking.networkmanager.dns = "none";

@@ -8,8 +8,17 @@
         enable = true;
         qemu.ovmf.enable = true;
         qemu.runAsRoot = false;
+        qemu.vhostUserPackages = [ 
+            pkgs.virtiofsd 
+        ];
         onBoot = "ignore";
         onShutdown = "shutdown";
+        qemu.verbatimConfig = ''
+            user = "unknowndimension"
+            group = "unknowndimension"
+        '';
+
+
     };
 
 
@@ -42,13 +51,13 @@
     };
 
 
-#    virtualisation.virtualbox.host = {
-#        enable = true;
-#        enableExtensionPack = true;
-#    };
+    virtualisation.virtualbox.host = {
+        enable = true;
+        enableExtensionPack = true;
+    };
     
     
-#    users.extraGroups.vboxusers.members = [ "unknowndimension" ];
+    users.extraGroups.vboxusers.members = [ "unknowndimension" ];
 
 
 }
