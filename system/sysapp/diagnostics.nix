@@ -23,6 +23,9 @@
         iw
         lshw
         libisoburn
+        zip
+        p7zip
+        libgpod
     ];
     programs.light.enable = true;
 }
