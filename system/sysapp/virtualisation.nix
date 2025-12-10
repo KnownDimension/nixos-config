@@ -6,7 +6,7 @@
     
     virtualisation.libvirtd = {
         enable = true;
-        qemu.ovmf.enable = true;
+#        qemu.ovmf.enable = true;
         qemu.runAsRoot = false;
         qemu.vhostUserPackages = [ 
             pkgs.virtiofsd 

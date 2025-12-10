@@ -11,7 +11,7 @@ home.packages = [
     pkgs.nix-prefetch-git
     pkgs.python3
     pkgs.gnupg
-    pkgs.gradience
+#    pkgs.gradience
     pkgs.rclone
     pkgs.feh
     pkgs.deja-dup

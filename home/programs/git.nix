@@ -5,14 +5,16 @@
 programs.git = {
   enable = true;
   lfs.enable = true;
-  package = pkgs.gitAndTools.gitFull;
-  userName = "KnownDimension";
-  aliases = {
-      ci = "commit";
-      co = "checkout";
-      s = "status";
-      re = "rebase";
-    };
+#  package = pkgs.gitAndTools.gitFull;
+  settings = {
+    user.name = "KnownDimension";
+    aliases = {
+        ci = "commit";
+        co = "checkout";
+        s = "status";
+        re = "rebase";
+      };
+  };
 
 };
 

@@ -6,15 +6,17 @@
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
-      vaapiIntel
-      vaapiVdpau
+#      vaapiIntel
+      libva-vdpau-driver
+      libva
       libvdpau-va-gl
+      libva-utils
       rocmPackages.clr.icd
-      amdvlk
+#      amdvlk
     ];
     extraPackages32 = with pkgs; [
-      driversi686Linux.amdvlk
-      pkgsi686Linux.vaapiIntel
+#      driversi686Linux.amdvlk
+#      pkgsi686Linux.vaapiIntel
     ];
     #driSupport = true;
     #driSupport32Bit = true;
@@ -37,9 +39,11 @@
     # See https://wiki.archlinux.org/index.php/Hardware_video_acceleration
 #    "VDPAU_DRIVER" = "radeonsi";
 #    "LIBVA_DRIVER_NAME" = "radeonsi";
+    AMD_VULKAN_ICD = "RADV";
     };
     systemPackages = with pkgs; [
       ffmpeg-full
+      vdpauinfo
     ];
   };
 

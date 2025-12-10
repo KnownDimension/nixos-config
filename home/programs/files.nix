@@ -13,7 +13,7 @@ home.packages = [
   programs.lf = {
     enable = true;
     commands = {
-      dragon-out = ''%${pkgs.xdragon}/bin/xdragon -a -x "$fx"'';
+      dragon-out = ''%${pkgs.dragon-drop}/bin/xdragon -a -x "$fx"'';
       editor-open = ''$$EDITOR $f'';
       mkdir = ''
       ''${{
