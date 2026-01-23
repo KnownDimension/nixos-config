@@ -14,7 +14,7 @@
     };
 
     layout = "us";
-    variant = "dvorak-alt-60";
+    variant = "dvorak";
   };
 
 
