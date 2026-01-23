@@ -10,7 +10,7 @@
     extraLayouts.dvorak-alt-60 = {
       description = "dvorak modded to suit my nonstandard 60% layout";
       languages = [ "eng" ];
-      symbolsFile = ./us;
+      symbolsFile = /symbols/dvorak-alt-60;
     };
 
     layout = "us";

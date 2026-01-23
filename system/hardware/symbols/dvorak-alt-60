@@ -1,0 +1,20 @@
+
+xkb_symbols "dvorak-alt-60" {
+    include "us(dvorak)"
+    name[Group1] = "US Dvorak Alt 60";
+
+    // Override specific keys
+    key <AB01> { [ q, Q ] };
+    key <AB02> { [ j, J ] };
+    key <AB03> { [ k, K ] };
+    key <AB04> { [ x, X ] };
+    key <AB05> { [ b, B ] };
+    key <AB06> { [ m, M ] };
+    key <AB07> { [ w, W ] };
+    key <AB08> { [ v, V ] };
+    key <AB09> { [ z, Z ] };
+    key <AB10> { [ slash, question ] };
+    key <AD11> { [ semicolon, colon ] };
+
+
+};
