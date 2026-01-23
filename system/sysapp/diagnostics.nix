@@ -28,6 +28,7 @@
         libgpod
         openssl
         wev
+        ckbcomp
     ];
     programs.light.enable = true;
 }

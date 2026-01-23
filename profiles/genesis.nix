@@ -67,10 +67,10 @@
     LC_TIME = "en_GB.UTF-8";
   };
   
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+#  services.xserver.xkb = {
+#    layout = "us";
+#    variant = "";
+#  };
 
   environment.sessionVariables = {
     NIX_PROFILES = "${pkgs.lib.concatStringsSep " " (pkgs.lib.reverseList config.environment.profiles)}";
