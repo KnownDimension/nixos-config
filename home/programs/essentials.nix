@@ -21,6 +21,7 @@ home.packages = [
     pkgs.syncthingtray
 #    pkgs.vial
     pkgs.protonvpn-gui
+    pkgs.obsidian
 #    pkgs.firefox-devedition
    ];
 

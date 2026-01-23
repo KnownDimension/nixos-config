@@ -26,6 +26,8 @@
         zip
         p7zip
         libgpod
+        openssl
+        wev
     ];
     programs.light.enable = true;
 }
