@@ -1,5 +1,6 @@
-
-xkb_symbols "dvorak-alt-60" {
+partial alphanumeric_keys
+xkb_symbols "dvorak-alt-60" 
+{
     include "us(dvorak)"
     name[Group1] = "US Dvorak Alt 60";
 

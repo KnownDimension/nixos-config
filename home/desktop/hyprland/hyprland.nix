@@ -24,6 +24,7 @@
     waypaper
     hypridle
     nwg-displays
+    pngquant
   ];
   home.file = {
     "/home/unknowndimension/.config/hypr/keybinds.conf".source = pkgs.lib.mkForce ./keybinds.conf;

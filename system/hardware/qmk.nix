@@ -10,12 +10,38 @@
     extraLayouts.dvorak-alt-60 = {
       description = "dvorak modded to suit my nonstandard 60% layout";
       languages = [ "eng" ];
-      symbolsFile = /symbols/dvorak-alt-60;
-    };
+      symbolsFile = pkgs.writeText "dvorak-alt-60" ''
+        partial alphanumeric_keys
+        xkb_symbols "dvorak-alt-60" 
+        {
+            include "us(dvorak)"
+            name[Group1] = "US Dvorak Alt 60";
 
-    layout = "us";
-    variant = "dvorak";
+            // Override specific keys
+            key <AB01> { [ q, Q ] };
+            key <AB02> { [ j, J ] };
+            key <AB03> { [ k, K ] };
+            key <AB04> { [ x, X ] };
+            key <AB05> { [ b, B ] };
+            key <AB06> { [ m, M ] };
+            key <AB07> { [ w, W ] };
+            key <AB08> { [ v, V ] };
+            key <AB09> { [ z, Z ] };
+            key <AB10> { [ slash, question ] };
+            key <AD11> { [ semicolon, colon ] };
+
+
+        };
+      '';
+      };
+    
+
+    layout = "dvorak-alt-60";
+    variant = "dvorak-alt-60";
+
   };
 
+#  console.keyMap = "dvorak";
+  console.useXkbConfig = true;
 
 }
