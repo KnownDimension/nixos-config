@@ -29,6 +29,7 @@
         openssl
         wev
         ckbcomp
+        foremost
     ];
     programs.light.enable = true;
 }

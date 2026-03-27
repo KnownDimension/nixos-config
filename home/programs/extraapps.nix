@@ -27,6 +27,7 @@ home.packages = [
     pkgs.localsend
     pkgs.anytype
 #    pkgs.olive-editor // currently has build error
+    pkgs.docker-client
    ];
 
 
