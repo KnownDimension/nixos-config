@@ -24,7 +24,6 @@
   };
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
-  chaotic.mesa-git.enable = true;
 
   hardware.amdgpu = {
     overdrive = {

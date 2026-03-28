@@ -14,7 +14,7 @@
   users.users.unknowndimension = {
     isNormalUser = true;
     description = "unknown_dimension";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "audio" "openrazer" "corectrl" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "audio" "openrazer" "corectrl" "video" ];
     hashedPasswordFile = config.sops.secrets."userpassword".path;
   };
   users.mutableUsers = false;

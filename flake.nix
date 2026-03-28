@@ -4,7 +4,7 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+#    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     stylix.url = "github:danth/stylix";
     home-manager = {
@@ -21,7 +21,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, chaotic, ... }@inputs:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
     in {
@@ -51,11 +51,11 @@
          # nixpkgs.legacyPackages.${system};
          inherit system;
          config.allowUnfree = true;
+         
         };
         specialArgs = {inherit inputs;};
         modules = [ 
           ./profiles/genesis.nix 
-          chaotic.nixosModules.default
        #   inputs.stylix.nixosModules.stylix
         ];
       };

@@ -13,7 +13,7 @@ environment.systemPackages = with pkgs; [
   glslang
   gst_all_1.gstreamer
   libdrm
-  pkgs.wlx-overlay-s 
+  pkgs.wayvr
   pkgs.stardust-xr-flatland 
   pkgs.stardust-xr-server 
   pkgs.stardust-xr-kiara

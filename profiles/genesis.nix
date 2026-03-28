@@ -50,7 +50,17 @@
   boot.initrd.luks.devices."luks-d6c1d1d7-e9d4-4b20-bd75-7fab163e0b11".keyFile = "/crypto_keyfile.bin";
 
   # nixos
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    substituters = [
+      "https://cache.nixos.org/"
+    ];
+
+    http-connections = 50;
+    download-buffer-size = 524288000;
+
+
+  };
  
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
