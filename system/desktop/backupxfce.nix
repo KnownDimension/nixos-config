@@ -6,13 +6,13 @@
   services.xserver.desktopManager.xfce.enable = true; 
 
   environment.systemPackages = with pkgs; [   
-    pkgs.xfce.xfce4-panel-profiles
-    xfce.xfce4-volumed-pulse
+    xfce4-panel-profiles
+    xfce4-volumed-pulse
     dunst
     pkgs.libnotify
   ];
 
-  programs.thunar.plugins = with pkgs.xfce; [
+  programs.thunar.plugins = with pkgs; [
     thunar-archive-plugin
     thunar-volman
   ];

@@ -8,7 +8,7 @@
 home.packages = [
     pkgs.cmatrix
     pkgs.cbonsai
-    pkgs.neofetch
+#    pkgs.neofetch
     pkgs.pfetch
     pkgs.atuin
     pkgs.dust

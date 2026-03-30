@@ -12,7 +12,7 @@
     targets = {
       waybar.enable = false;
       vscode.enable = false;
-      hyprland.hyprpaper.enable = false;
+      hyprland.enable = false;
     };
     base16Scheme = {
       base00 = "2E3440";
@@ -33,6 +33,19 @@
       base0F = "5E81AC";
   };
 
+    cursor = {
+      name = "Nordzy-cursors";
+      package = pkgs.nordzy-cursor-theme;
+      size = 24;
+    };
+
+    icons = {
+      package = pkgs.nordzy-icon-theme;
+      dark = "Nordzy-dark";
+    };
+
   };
+
+
 
 }

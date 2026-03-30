@@ -20,7 +20,7 @@ home.packages = [
     pkgs.jdk17
     pkgs.syncthingtray
 #    pkgs.vial
-    pkgs.protonvpn-gui
+    pkgs.proton-vpn
     pkgs.obsidian
 #    pkgs.firefox-devedition
    ];

@@ -14,7 +14,7 @@ home.packages = [
     pkgs.conda
     pkgs.boxbuddy
     pkgs.brave
-    pkgs.blender-hip
+    pkgs.pkgsRocm.blender
     pkgs.openseeface
  #   pkgs.wine64
  #   pkgs.gpt4all-cuda

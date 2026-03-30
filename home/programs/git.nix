@@ -16,6 +16,8 @@ programs.git = {
       };
   };
 
+  signing.format = "openpgp";
+
 };
 
 programs.gh = {

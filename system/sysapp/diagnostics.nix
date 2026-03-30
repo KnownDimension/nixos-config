@@ -31,6 +31,7 @@
         ckbcomp
         foremost
     ];
-     hardware.acpilight.enable = true;
-#    programs.light.enable = true;
+    hardware.acpilight.enable = true;
+#   programs.light.enable = true;
+    programs.iotop.package = true;
 }
