@@ -48,7 +48,7 @@
     ./programs/work.nix
     ./programs/strawberry.nix
   #  ./programs/unity.nix not in use rn
-  #  ./programs/ollama.nix
+    ./programs/godot.nix
     ./programs/git.nix
     ./desktop/gtkandqt.nix
     ./desktop/waylandpackages.nix

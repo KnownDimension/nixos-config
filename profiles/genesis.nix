@@ -27,8 +27,10 @@
       ../system/sysapp/polkit.nix
       ../system/sysapp/qtsystem.nix
       ../system/sysapp/virtualisation.nix
+      ../system/sysapp/steam.nix
       ../system/user/user.nix
       ../system/secret/secretmanagement.nix
+
       inputs.stylix.nixosModules.stylix
 
 
@@ -58,7 +60,7 @@
 
     http-connections = 50;
     download-buffer-size = 524288000;
-
+    max-jobs = 2;
 
   };
  

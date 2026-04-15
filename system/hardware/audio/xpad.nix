@@ -2,9 +2,14 @@
 
 {
 
-  hardware.xpadneo.enable = true;
+  hardware.xone.enable = true;
 #  hardware.enableAllFirmware = true;
-  boot.extraModprobeConfig = '' options bluetooth disable_ertm=1 '';
-
+ # boot = {
+  #  kernelModules = [ "hid_xpadneo" ];
+  #  extraModulePackages = with config.boot.kernelPackages; [ xpadneo ];
+  #  extraModprobeConfig = '' options bluetooth disable_ertm=y '';
+ # };
+  
+  
 
 }

@@ -56,7 +56,6 @@
         specialArgs = {inherit inputs;};
         modules = [ 
           ./profiles/genesis.nix 
-       #   inputs.stylix.nixosModules.stylix
         ];
       };
 
