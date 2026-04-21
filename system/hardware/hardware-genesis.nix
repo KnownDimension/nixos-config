@@ -16,11 +16,14 @@
   boot.extraModulePackages = [ ];
   
 
+ 
+  services.fstrim.enable = true;
 
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/ba3eb6fd-4fb9-4570-920c-4609d16d5823";
       fsType = "ext4";
+      options = [ "noatime" "commit=30" "lazytime" ];
     };
 
   boot.initrd.luks.devices."luks-3c51d252-3d4f-421a-b6a7-31e243fcba38".device = "/dev/disk/by-uuid/3c51d252-3d4f-421a-b6a7-31e243fcba38";
@@ -56,6 +59,12 @@
 
   };
 
+
+  services.journald.extraConfig = ''
+    Storage=auto
+    SystemMaxUse=200M
+    RuntimeMaxUse=200M
+  '';
   
   # Disable NetworkManager's internal DNS resolution
 #  networking.networkmanager.dns = "none";

@@ -7,5 +7,5 @@ home.packages = [
 
 
 
-  ]
+  ];
 }
