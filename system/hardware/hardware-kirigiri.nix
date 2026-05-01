@@ -11,33 +11,38 @@
     
     ];
 
-  boot.initrd.availableKernelModules = [ "ehci_pci" "ahci" "xhci_pci" "firewire_ohci" "usbhid" "usb_storage" "sd_mod" "sr_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "ahci" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" "sr_mod" ];
   boot.initrd.kernelModules = [ "amdgpu" "vfio-pci" ];
-  boot.kernelModules = [ "kvm-intel" ]
+  boot.kernelModules = [ "kvm-amd" ]
   boot.extraModulePackages = [ ];
   
-
 
  
   services.fstrim.enable = true;
 
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/ba3eb6fd-4fb9-4570-920c-4609d16d5823";
-      fsType = "ext4";
-      options = [ "noatime" "commit=30" "lazytime" ];
+    { device = "/dev/disk/by-uuid/cb936604-d662-415e-b571-90302dc9943d";
+      fsType = "btrfs";
+      options = [ "subvol=@" ];
     };
 
-  boot.initrd.luks.devices."luks-3c51d252-3d4f-421a-b6a7-31e243fcba38".device = "/dev/disk/by-uuid/3c51d252-3d4f-421a-b6a7-31e243fcba38";
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/cb936604-d662-415e-b571-90302dc9943d";
+      fsType = "btrfs";
+      options = [ "subvol=@home" ];
+    };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/991D-86E6";
+    { device = "/dev/disk/by-uuid/80C7-BEDE";
       fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/befe99b6-d514-4d1a-9642-b8a60bd94806"; }
+    [ { device = "/dev/disk/by-uuid/157a84a5-3f20-4d63-8254-e6594cd139ce"; }
     ];
+
 
 
 
@@ -48,8 +53,8 @@
 
   networking = {
     networkmanager.enable = true;
-    hostName = "udimension-genesis-nixos"; # Define your hostname.
-    interfaces.wlp7s0 = {
+    hostName = "udimension-kirigiri"; # Define your hostname.
+    interfaces.wlp10s0 = {
       ipv4.addresses = [{
         address = "192.168.1.5";
         prefixLength = 24;
@@ -62,11 +67,6 @@
   };
 
 
-  services.journald.extraConfig = ''
-    Storage=auto
-    SystemMaxUse=200M
-    RuntimeMaxUse=200M
-  '';
   
   # Disable NetworkManager's internal DNS resolution
 #  networking.networkmanager.dns = "none";
@@ -88,7 +88,7 @@
   networking.useDHCP = lib.mkDefault true;
   
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   
 }

@@ -3,7 +3,7 @@
 {
 
     boot = {
-        kernelModules = [ "snd-seq" "snd-rawmidi" "kvm-intel" "i2c-dev" ];
+        kernelModules = [ "snd-seq" "snd-rawmidi" "i2c-dev" ];
         kernel.sysctl = { "vm.swappiness" = 10; "fs.inotify.max_user_watches" = 524288; "vm.dirty_ratio" = 10; "vm.dirty_background_ratio" = 5; };
         kernelParams = [ "pcie_aspm=off" "CONFIG_SCHED_DEBUG=y"
     "CONFIG_LOCK_DEBUGGING=y"
@@ -23,13 +23,15 @@
         
        # });
 
-            
+
+
+
         # disable_11ax=1 11n_disable=1
-        extraModprobeConfig = ''
-            options iwlwifi power_save=0 uapsd_disable=1
-
-
-        '';
+#        extraModprobeConfig = ''
+#            options iwlwifi power_save=0 uapsd_disable=1
+#
+#
+#        '';
 
 
         blacklistedKernelModules = [

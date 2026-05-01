@@ -55,7 +55,8 @@
         };
         specialArgs = {inherit inputs;};
         modules = [ 
-          ./profiles/genesis.nix 
+#          ./profiles/genesis.nix 
+           ./profiles/kirigiri.nix
         ];
       };
 
