@@ -64,6 +64,15 @@
     max-jobs = 2;
 
   };
+
+  
+    nixpkgs.config.permittedInsecurePackages = [
+      "openssl-1.1.1w"
+    ];
+  
+
+
+
  
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";

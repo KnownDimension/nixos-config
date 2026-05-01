@@ -20,7 +20,7 @@
     pkgs.mako
     hyprlock
     mpvpaper
-    swww
+    awww
     waypaper
     hypridle
     nwg-displays
