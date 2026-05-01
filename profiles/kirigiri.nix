@@ -43,15 +43,7 @@
      efi.canTouchEfiVariables = true;
   };
 
-  # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
-
-  # Enable swap on luks
-  boot.initrd.luks.devices."luks-d6c1d1d7-e9d4-4b20-bd75-7fab163e0b11".device = "/dev/disk/by-uuid/d6c1d1d7-e9d4-4b20-bd75-7fab163e0b11";
-  boot.initrd.luks.devices."luks-d6c1d1d7-e9d4-4b20-bd75-7fab163e0b11".keyFile = "/crypto_keyfile.bin";
-
+  
   # nixos
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
