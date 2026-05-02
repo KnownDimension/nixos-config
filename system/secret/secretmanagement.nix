@@ -9,7 +9,7 @@
    sops = { 
     defaultSopsFile = ./secrets/plain-secrets.yaml;
     defaultSopsFormat = "yaml";
-    age.keyFile = "/home/unknowndimension/.config/sops/age/keys.txt";
+    age.keyFile = "/etc/sops/age/keys.txt";
    };
 
 
