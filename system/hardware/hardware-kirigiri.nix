@@ -7,7 +7,7 @@
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
       ./kernel.nix
-      ./kernel-extra.nix
+#      ./kernel-extra.nix
     
     ];
 
@@ -24,13 +24,13 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/cb936604-d662-415e-b571-90302dc9943d";
       fsType = "btrfs";
-      options = [ "subvol=@" ];
+      options = [ "subvol=@" "noatime" ];
     };
 
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/cb936604-d662-415e-b571-90302dc9943d";
       fsType = "btrfs";
-      options = [ "subvol=@home" ];
+      options = [ "subvol=@home" "noatime"];
     };
 
   fileSystems."/boot" =
