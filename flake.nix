@@ -7,6 +7,7 @@
 #    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     stylix.url = "github:danth/stylix";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +22,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
     in {
@@ -43,6 +44,7 @@
         modules = [ 
           ./home/home.nix 
           inputs.stylix.homeModules.stylix
+          nix-flatpak.homeManagerModules.nix-flatpak
         ];
 
         # Optionally use extraSpecialArgs

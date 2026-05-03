@@ -39,6 +39,13 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+  fileSystems."/home/unknowndimension/gamedrive" = {
+    device = "/dev/disk/by-uuid/1c1b2ad5-281e-4a42-9298-31f6af4a15d0";  # your drive UUID
+    fsType = "xfs";             # or ntfs, vfat, etc.
+    options = [ "defaults" "noatime" "nodiratime" ];
+  };
+
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/157a84a5-3f20-4d63-8254-e6594cd139ce"; }
     ];

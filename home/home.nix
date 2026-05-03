@@ -47,6 +47,7 @@
     ./programs/vscode.nix
     ./programs/work.nix
     ./programs/strawberry.nix
+    ./programs/flatpak-home.nix
   #  ./programs/unity.nix not in use rn
     ./programs/godot.nix
     ./programs/git.nix
