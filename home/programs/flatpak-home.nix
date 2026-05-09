@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-
+services.flatpak.enable = true;
 
 services.flatpak = {
   update = {
@@ -15,6 +15,8 @@ services.flatpak = {
 
   packages = [
     "org.vinegarhq.Sober"
+    "org.prismlauncher.PrismLauncher"
+    "net.lutris.Lutris"
 
 
 

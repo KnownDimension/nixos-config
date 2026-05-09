@@ -22,6 +22,7 @@ home.packages = [
 #    pkgs.vial
     pkgs.proton-vpn
     pkgs.obsidian
+    pkgs.peazip
 #    pkgs.firefox-devedition
    ];
 

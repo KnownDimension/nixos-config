@@ -6,11 +6,13 @@
     
     virtualisation.libvirtd = {
         enable = true;
-#        qemu.ovmf.enable = true;
-        qemu.runAsRoot = false;
+        qemu.ovmf.enable = true;
+        qemu.runAsRoot = true;
+        qemu.swtpm.enable = true;
         qemu.vhostUserPackages = [ 
             pkgs.virtiofsd 
         ];
+        qemu.package = pkgs.qemu_kvm;
         onBoot = "ignore";
         onShutdown = "shutdown";
         qemu.verbatimConfig = ''

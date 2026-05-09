@@ -19,6 +19,10 @@ home.packages = with pkgs; [
    #     beetle-psx-hw
    #   ];
    # })
+    pkgs.heroic
+    umu-launcher
+    faugus-launcher
+#    lutris
 
    ];
 
