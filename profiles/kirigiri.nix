@@ -44,6 +44,8 @@
   };
 
   
+
+  
   # nixos
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
@@ -94,10 +96,15 @@
   environment.systemPackages = with pkgs; [
     pkgs.home-manager
     pkgs.appimage-run
+    pkgs.nix-alien
+    pkgs.libxkbcommon
+    wireguard-tools
+
   ];
   system.stateVersion = "23.05";
   time.timeZone = "Europe/London";
-
+  
+  programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
   systemd.tmpfiles.rules = [

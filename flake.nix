@@ -8,6 +8,7 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     stylix.url = "github:danth/stylix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    nix-alien.url = "github:thiagokokada/nix-alien";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +23,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nix-flatpak, ... }@inputs:
+  outputs = { nixpkgs, home-manager, nix-flatpak, self, nix-alien, ... }@inputs:
     let
       system = "x86_64-linux";
     in {
@@ -60,10 +61,17 @@
           permittedInsecurePackages = ["openssl-1.1.1w"];
          };
         };
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs self system;};
         modules = [ 
 #          ./profiles/genesis.nix 
            ./profiles/kirigiri.nix
+           ({ self, ... }: {
+              nixpkgs.overlays = [
+                self.inputs.nix-alien.overlays.default
+              ];
+              # Optional, needed for `nix-alien-ld`
+              programs.nix-ld.enable = true;
+            })
         ];
       };
 

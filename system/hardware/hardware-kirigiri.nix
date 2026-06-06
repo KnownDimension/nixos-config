@@ -75,6 +75,10 @@
 
 
   
+
+
+
+  
   # Disable NetworkManager's internal DNS resolution
 #  networking.networkmanager.dns = "none";
 

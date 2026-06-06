@@ -22,6 +22,7 @@ home.packages = with pkgs; [
     pkgs.heroic
     umu-launcher
     faugus-launcher
+    pkgs.prismlauncher
 #    lutris
 
    ];

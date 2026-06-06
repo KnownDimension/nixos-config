@@ -28,6 +28,9 @@ home.packages = [
     pkgs.anytype
 #    pkgs.olive-editor // currently has build error
     pkgs.docker-client
+    pkgs.rockbox-utility
+    pkgs.vesktop
+    pkgs.kdePackages.kdenlive
    ];
 
 

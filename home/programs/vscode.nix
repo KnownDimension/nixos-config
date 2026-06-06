@@ -5,7 +5,7 @@
 {
 
     programs = {
-        vscode = {
+        vscodium = {
             enable = true;
             mutableExtensionsDir = false;
             package = pkgs.vscodium;
