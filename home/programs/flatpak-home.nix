@@ -18,7 +18,7 @@ services.flatpak = {
     "org.vinegarhq.Sober"
 #    "org.prismlauncher.PrismLauncher"
     "net.lutris.Lutris"
-    "net.rpcs3.RPCS3"
+#    "net.rpcs3.RPCS3"
     "com.usebottles.bottles"
     "org.chromium.Chromium"
     "com.github.tchx84.Flatseal"

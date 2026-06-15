@@ -32,6 +32,9 @@
     #                    ms-dotnettools.csharp
     #                    ms-dotnettools.vscodeintellicode-csharp
     #                    ms-dotnettools.vscode-dotnet-runtime
+    #                    ms-vscode.cpptools
+                        llvm-vs-code-extensions.vscode-clangd
+    #                    vadimcn.vscode-lldb
 
 
 
@@ -92,7 +95,6 @@
 #    home.sessionVariables = {
 #        DOTNET_ROOT = "${pkgs.dotnet-sdk}";
 #    };
-
 
 
 }

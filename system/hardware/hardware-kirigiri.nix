@@ -40,9 +40,14 @@
     };
 
   fileSystems."/home/unknowndimension/gamedrive" = {
-    device = "/dev/disk/by-uuid/1c1b2ad5-281e-4a42-9298-31f6af4a15d0";  # your drive UUID
-    fsType = "xfs";             # or ntfs, vfat, etc.
+    device = "/dev/disk/by-uuid/1c1b2ad5-281e-4a42-9298-31f6af4a15d0";  
+    fsType = "xfs";
     options = [ "defaults" "noatime" "nodiratime" ];
+  };
+  fileSystems."/home/unknowndimension/archiveVideo" = {
+    device = "/dev/disk/by-uuid/978b95bf-c928-4a77-a308-dfeaeec8f2c2"; 
+    fsType = "btrfs";           
+    options = [ "defaults" "noatime" "nodiratime" "compress-force=zstd:15" ];
   };
 
 

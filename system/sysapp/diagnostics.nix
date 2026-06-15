@@ -1,4 +1,4 @@
-
+# needed libraries for system and other uses
 
 
 { config, lib, pkgs, modulesPath, ... }:
@@ -30,6 +30,11 @@
         wev
         ckbcomp
         foremost
+
+        # C dev
+        clang-tools
+        gcc
+        stdenv.cc.libc
     ];
     hardware.acpilight.enable = true;
 #   programs.light.enable = true;

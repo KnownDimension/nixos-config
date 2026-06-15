@@ -31,6 +31,7 @@ home.packages = [
     pkgs.rockbox-utility
     pkgs.vesktop
     pkgs.kdePackages.kdenlive
+    pkgs.inkscape
    ];
 
 

@@ -10,7 +10,7 @@
 
   #gtk
   gtk.enable = true;
-  gtk.gtk4.theme = null;
+#  gtk.gtk4.theme = null;
   #gtk.cursorTheme.package = pkgs.nordzy-cursor-theme;
   #gtk.cursorTheme.name = "Nordzy-cursors";
   
